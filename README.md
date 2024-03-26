@@ -1,1 +1,0 @@
-# MiniProject3-Sekolahbeta
