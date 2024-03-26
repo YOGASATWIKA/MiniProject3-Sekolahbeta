@@ -21,7 +21,7 @@ type Book struct {
 }
 
 func (bk *Book)Create(db *gorm.DB)error  {
-	err := db.Model(book{}).Create(&bk).Error
+	err := db.Model(Book{}).Create(&bk).Error
 	if err != nil {
 		return err
 	}
@@ -53,9 +53,9 @@ func (bk *Book)GetAll(db *gorm.DB)([]Book, error)  {
 }
 
 
-func (bk *Book)UpdateOne(db *gorm.DB)error{
+func (bk *Book)UpdateOneByID(db *gorm.DB)error{
 	err := db.
-	Model(Car{}).
+	Model(Book{}).
 	Select("id", "created_at", "updated_at", "deleted_at","isbn","penulis", "tahun", "judul", "gambar", "stok").Where("id = ?", bk.Model.ID).
 	Updates(map[string]interface{}{
 		"id": bk.ID, 
@@ -80,7 +80,7 @@ func (bk *Book)UpdateOne(db *gorm.DB)error{
 func (bk *Book) DeleteByID(db *gorm.DB) error{
 	err := db.
 		Model(Book{}).
-		Where("id = ?", bk.Model.ID)
+		Where("id = ?", bk.Model.ID).
 		Delete(&bk).
 		Error
 

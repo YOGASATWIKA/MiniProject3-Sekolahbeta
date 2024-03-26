@@ -1,6 +1,7 @@
 package config
 
 import (
+	"MiniProject3-sekolahbeta/model"
 	"fmt"
 	"log"
 	"os"
@@ -43,7 +44,7 @@ func OpenDB()  {
 
 func autoMigrate(db *gorm.DB) error{
 	err := db.AutoMigrate(
-		&model.Car{},
+		&model.Book{},
 	)
 
 	if err != nil {
