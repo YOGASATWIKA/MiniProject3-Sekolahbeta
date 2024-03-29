@@ -57,4 +57,3 @@ func (bk *Book) DeleteByID(db *gorm.DB) error  {
 		return err
 	}
 	return nil}
-
