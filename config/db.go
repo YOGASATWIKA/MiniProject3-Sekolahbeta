@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"log"
 	"os"
-
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -23,7 +22,7 @@ func OpenDB()  {
 		os.Getenv("DB_PASS"),
 		os.Getenv("DB_HOST"),
 		os.Getenv("DB_PORT"),
-		os.Getenv("DB_NAME"))
+		os.Getenv("DB_DATABASE"))
 
 
 	mysqlConn,err := gorm.Open(mysql.Open(connString), &gorm.Config{}) 
