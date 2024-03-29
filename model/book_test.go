@@ -26,8 +26,8 @@ func TestCreateBook(t *testing.T)  {
 		ISBN: "yoga",
 		Penulis:"yoga",
 		Tahun: 2012,
-		Judul: "anu",
-		Gambar: "anu",
+		Judul: "yoga",
+		Gambar: "yoga",
 		Stok: 10,
 	}
 	err := bookData.Create(config.Mysql.DB)
@@ -42,8 +42,8 @@ func TestUpdate(t *testing.T)  {
 		ISBN: "yoga",
 		Penulis:"yoga",
 		Tahun: 2012,
-		Judul: "anu",
-		Gambar: "anu",
+		Judul: "yoga",
+		Gambar: "yoga",
 		Stok: 10,
 	}
 
@@ -66,8 +66,8 @@ func TestGetAll(t *testing.T)  {
 		ISBN: "yoga",
 		Penulis:"yoga",
 		Tahun: 2012,
-		Judul: "anu",
-		Gambar: "anu",
+		Judul: "yoga",
+		Gambar: "yoga",
 		Stok: 10,
 	}
 	err := bookData.Create(config.Mysql.DB)
